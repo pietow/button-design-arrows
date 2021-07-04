@@ -1,0 +1,272 @@
+/*global box-sizing fix*/
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #f7f7f7;
+}
+
+/*global margins*/
+body * + * {
+    /* margin-top: 1.5em; */
+}
+
+/*default margins are removed*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+/*headings are unstyled*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*lists are unstyled*/
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*images are block-level*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+/*prevent image from overflowing the container*/
+img {
+max-width: 100%;
+}
+
+/*border styles are reset globally*/
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: red;
+}
+
+/***default btn*******/
+.btn {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    background: #0F9;
+    color: #444;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/********CARD BOX********/
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 1rem 1rem .8rem rgba(0, 0, 0, 0.15); 
+    margin: 1em;
+}
+
+.card-header {
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: #8b5cf6;
+    font-size: 1.5em;
+    color: #fde68a;
+}
+
+.card-header > img {
+    flex-basis: 1em;
+    min-width: 0;
+    margin: 0 0 0 auto;
+}
+
+.card-img {
+    width: 100%;
+    margin: 0;
+}
+
+.card p {
+    background: #e5e7eb;
+    padding: 1em;
+}
+
+.card-footer {
+    padding: 0.5rem 1rem;
+    background-color: #93c5fd;
+    text-align: center;
+    margin: 0;
+}
+
+/*******CSS RESET / DEFAULT END******/
+
+/*double container to center page content*/
+.container {
+    display: flex;
+    max-width: 1080px;
+    margin: 5em auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container > * {
+    flex: 33.3333%;
+}
+
+button {
+    margin: 1em;
+}
+
+/***Defining depth with gradients and shadows***/
+.skeu {
+    padding: 1em;
+    border: 0;
+    font-size: .8em;
+    color: white;
+    border-radius: .5em;
+    background-color:  #57b;
+    background-image: linear-gradient(to bottom, #57b, #148);
+    box-shadow: .1em .1em .5em #124;
+}
+
+.skeu:active {
+    box-shadow: inset 0 0 0.5em #124,
+                inset 0 .5em 1em rgba(0,0,0,.4);
+}
+    
+/**Flat Design**/
+.flat {
+    padding: 1em;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    background-color:  #57b;
+    box-shadow: 0 .2em .2em rgba(0, 0, 0, .25);
+}
+
+.flat:hover {
+    background-color: #456ab6;
+}
+
+.flat:active {
+    background-color: #148;
+}
+
+/**Flat Design**/
+.flat {
+    padding: 1em;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    background-color:  #57b;
+    box-shadow: 0 .2em .2em rgba(0, 0, 0, .25);
+}
+
+.flat:hover {
+    background-color: #456ab6;
+}
+
+.flat:active {
+    background-color: #148;
+}
+
+/** inbetween **/
+.inbetween {
+    padding: .8em;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    border-radius: .5em;
+    background-color:  #57b;
+    box-shadow: 0 .4em #148;
+    text-shadow: 1px 1px #148;
+}
+
+.inbetween:active {
+    background-color: #456ab5;
+    transform: translateY(.1em);
+    box-shadow: 0 .3em #148;
+    /* box-shadow: none; */
+}
+
+.container > p {
+    padding: 1em;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+
+.border > * + * {
+    margin-left: 1em;
+}
+
+.border-1 {
+    flex: 0 0 33%;
+    height: 5em;
+    width: 5em;
+    border: 1em solid;
+    border-color: blue brown green red;
+}
+ 
+.border-2 {
+    height: 0em;
+    width: 0em;
+    flex: 0;
+    border: 1em solid;
+    border-color: blue brown green red;
+}
+ 
+.border-3 {
+    height: 0em;
+    width: 0em;
+    flex: 0;
+    border: 1em solid;
+    border-color: blue transparent transparent;
+}
+ 
